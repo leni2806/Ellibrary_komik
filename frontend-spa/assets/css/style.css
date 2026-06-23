@@ -1,0 +1,53 @@
+/* ==========================================================================
+   UAS Pemrograman Web 2 - Premium Style & Utilities
+   ========================================================================== */
+
+/* Font & Smooth Scrolling */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Transisi Halus Global */
+.smooth-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efek Hover Sampul Komik Premium */
+.comic-card-image {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.comic-card:hover .comic-card-image {
+    transform: scale(1.06) translateY(-4px);
+}
+
+/* Kustomisasi Scrollbar Minimalis */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Kustom Efek Backdrop Modal (Glassmorphism) */
+.glass-backdrop {
+    background: rgba(15, 23, 42, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Efek Gradient Text untuk Judul Utama */
+.text-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

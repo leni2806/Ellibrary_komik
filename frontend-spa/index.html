@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KomikKu - E-Library Komik Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        manga: {
+                            50:  '#fdf2f8',
+                            100: '#fce7f3',
+                            200: '#fbcfe8',
+                            300: '#f9a8d4',
+                            400: '#f472b6',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                            800: '#9d174d',
+                            900: '#831843',
+                        },
+                        dark: {
+                            900: '#0f0f1a',
+                            800: '#1a1a2e',
+                            700: '#16213e',
+                            600: '#0f3460',
+                        }
+                    },
+                    fontFamily: {
+                        manga: ['"Segoe UI"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        [v-cloak] { display: none; }
+        .comic-card:hover { transform: translateY(-6px) rotate(0.5deg); }
+        .comic-card { transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .gradient-text { background: linear-gradient(135deg, #ec4899, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero-bg { background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #0f3460 100%); }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #1a1a2e; }
+        ::-webkit-scrollbar-thumb { background: #db2777; border-radius: 3px; }
+        @keyframes modalIn { from { opacity:0; transform:scale(0.9) translateY(-20px); } to { opacity:1; transform:scale(1) translateY(0); } }
+        .modal-enter { animation: modalIn 0.3s ease; }
+        @keyframes toastIn { from { opacity:0; transform:translateX(100%); } to { opacity:1; transform:translateX(0); } }
+        @keyframes toastOut { to { opacity:0; transform:translateX(100%); } }
+        .toast { animation: toastIn 0.3s ease, toastOut 0.3s ease 2.7s forwards; }
+        .badge-tersedia { background: linear-gradient(135deg, #10b981, #059669); }
+        .badge-habis { background: linear-gradient(135deg, #ef4444, #dc2626); }
+        .loading-pulse { animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.5} }
+        .slide-enter-active, .slide-leave-active { transition: all 0.3s ease; }
+        .slide-enter-from, .slide-leave-to { opacity: 0; transform: translateX(100%); }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-100 font-manga min-h-screen">
+    <!-- INI YANG PENTING: cukup div#app kosong, semua dihandle app.js -->
+    <div id="app"></div>
+
+    <!-- Vue 3 + Vue Router CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4/dist/vue-router.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Components — urutan penting, harus sebelum app.js -->
+    <script src="components/Home.js"></script>
+    <script src="components/Login.js"></script>
+    <script src="components/Dashboard.js"></script>
+    <script src="components/Komik.js"></script>
+    <script src="components/Genre.js"></script>
+    <script src="components/Penulis.js"></script>
+    <script src="components/Anggota.js"></script>
+    <script src="components/Peminjaman.js"></script>
+
+    <!-- Main app — paling terakhir -->
+    <script src="app.js"></script>
+</body>
+</html>
