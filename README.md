@@ -45,7 +45,8 @@
 5. [cite_start]`peminjaman` : Tabel transaksi yang menghubungkan tabel komik dan anggota[cite: 80].
 
 ### 📸 Screenshot Skema Relasi Tabel (phpMyAdmin)
-![Skema Relasi Database](<img width="1013" height="177" alt="tabel" src="https://github.com/user-attachments/assets/adcb9c3a-2da9-47fb-8c4f-6f69076e8b2a" />)
+![Skema Relasi Database](<img width="1013" height="177" alt="tabel" src="https://github.com/user-attachments/assets/3ee90cf6-17ca-49da-990a-6994ea727243" />
+)
 
 ---
 
@@ -144,7 +145,8 @@ axios.interceptors.response.use(
 | URL | `http://localhost:8080/api/komik` |
 | Keterangan | Endpoint publik, dapat diakses bebas untuk menampilkan daftar komik di landing page. |
 
-<img width="830" height="437" alt="401" src="https://github.com/user-attachments/assets/b91da93d-f765-49b5-b9ad-13804ba46037" />
+<img width="810" height="310" alt="get" src="https://github.com/user-attachments/assets/1da1d4a3-727d-4f12-9573-bea2526a203d" />
+
 
 
 ---
