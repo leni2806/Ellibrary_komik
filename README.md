@@ -234,8 +234,8 @@ Halaman Dashboard
 ### Langkah 1 — Clone Repositori
 
 ```bash
-git clone https://github.com/[Username_GitHub_Kamu]/UAS_Web2_NIM_Nama.git
-cd UAS_Web2_NIM_Nama
+git clone https://github.com/leni2806/Elibrary_komik.git
+cd UAS_Web2_312410442_Leni
 ```
 
 ### Langkah 2 — Konfigurasi Backend (CodeIgniter 4)
@@ -278,7 +278,7 @@ Jalankan `index.html` menggunakan ekstensi **Live Server** di VS Code, atau buka
 
 | | Link |
 |---|---|
-| 🌐 Demo Aplikasi | *(Tambahkan link demo jika tersedia)* |
+| 🌐 Demo Aplikasi | *(http://elibrary-leni.infinityfreeapp.com/app/?i=1#/)* |
 | 🎥 Video Presentasi (YouTube) | *(https://youtu.be/gL2NxENuW-I)* |
 
 ---
