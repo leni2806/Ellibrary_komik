@@ -45,8 +45,9 @@
 5. [cite_start]`peminjaman` : Tabel transaksi yang menghubungkan tabel komik dan anggota[cite: 80].
 
 ### 📸 Screenshot Skema Relasi Tabel (phpMyAdmin)
-![Skema Relasi Database](<img width="1013" height="177" alt="tabel" src="https://github.com/user-attachments/assets/3ee90cf6-17ca-49da-990a-6994ea727243" />
-)
+
+<img width="1013" height="177" alt="tabel" src="https://github.com/user-attachments/assets/d7c3b96a-f3f4-4a30-b914-b82b4b460fff" />
+
 
 ---
 
