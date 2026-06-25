@@ -17,32 +17,32 @@ Proyek ini menerapkan **Decoupled Architecture** (Arsitektur Terpisah) yang memi
 
 ## 🛠️ Spesifikasi Ekosistem Teknologi
 
-### [cite_start]1. Backend Engine (Folder: `backend-api/`) [cite: 62]
-* [cite_start]**Framework:** PHP CodeIgniter 4 (CI4) yang dikonfigurasi murni sebagai RESTful API Server[cite: 8].
-* [cite_start]**Controller:** Menggunakan `ResourceController` untuk menyediakan endpoint CRUD data master secara otomatis[cite: 8, 25].
-* [cite_start]**Server-Side Security:** Menerapkan *CodeIgniter Filters* untuk memproteksi endpoint manipulasi data (`POST`, `PUT`, `DELETE`) menggunakan *Authorization Bearer Token*[cite: 26, 27].
-* [cite_start]**Penanganan CORS:** Mengonfigurasi *CORS Filter* global pada `Config/Filters.php` agar API dapat menerima request lintas origin dari frontend tanpa terblokir oleh browser[cite: 28].
+### 1. Backend Engine (Folder: `backend-api/`)
+* **Framework:** PHP CodeIgniter 4 (CI4) yang dikonfigurasi murni sebagai RESTful API Server.
+* **Controller:** Menggunakan `ResourceController` untuk menyediakan endpoint CRUD data master secara otomatis].
+* **Server-Side Security:** Menerapkan *CodeIgniter Filters* untuk memproteksi endpoint manipulasi data (`POST`, `PUT`, `DELETE`) menggunakan *Authorization Bearer Token*.
+* **Penanganan CORS:** Mengonfigurasi *CORS Filter* global pada `Config/Filters.php` agar API dapat menerima request lintas origin dari frontend tanpa terblokir oleh browser.
 
-### [cite_start]2. Frontend Engine (Folder: `frontend-spa/`) [cite: 63]
-* [cite_start]**Core Engine:** VueJS 3 berbasis CDN untuk mengelola komponen secara modular[cite: 9, 63].
-* [cite_start]**Routing:** Vue Router berbasis CDN untuk perpindahan halaman tanpa memuat ulang browser (*Single Page Application / No Hard-Reload*)[cite: 9, 40].
-* [cite_start]**Client-Side Security:** Menggunakan *Navigation Guards* (`router.beforeEach()`) dengan properti `meta: { requiresAuth: true }` untuk memproteksi halaman panel admin dari pengguna ilegal[cite: 43, 44].
-* [cite_start]**Otomatisasi Token:** Menggunakan *Axios Request Interceptor* untuk menyuntikkan token dari `localStorage` secara otomatis, serta *Axios Response Interceptor* untuk menangkap error `401 Unauthorized` secara global[cite: 34, 46, 48].
-* [cite_start]**User Interface (UI):** Didesain menggunakan *utility-first class* dari TailwindCSS via CDN agar tampilan responsif, rapi, dan modern[cite: 10].
+### 2. Frontend Engine (Folder: `frontend-spa/`)
+* **Core Engine:** VueJS 3 berbasis CDN untuk mengelola komponen secara modular.
+* **Routing:** Vue Router berbasis CDN untuk perpindahan halaman tanpa memuat ulang browser (*Single Page Application / No Hard-Reload*).
+* **Client-Side Security:** Menggunakan *Navigation Guards* (`router.beforeEach()`) dengan properti `meta: { requiresAuth: true }` untuk memproteksi halaman panel admin dari pengguna ilegal.
+* **Otomatisasi Token:** Menggunakan *Axios Request Interceptor* untuk menyuntikkan token dari `localStorage` secara otomatis, serta *Axios Response Interceptor* untuk menangkap error `401 Unauthorized` secara global.
+* **User Interface (UI):** Didesain menggunakan *utility-first class* dari TailwindCSS via CDN agar tampilan responsif, rapi, dan modern.
 
 ### 3. Database
-* [cite_start]**DBMS:** MySQL / MariaDB sebagai basis data utama[cite: 11].
+* **DBMS:** MySQL / MariaDB sebagai basis data utama.
 
 ---
 
 ## 🗺️ Arsitektur Database & Relasi Tabel
 
 [cite_start]Sistem ini menggunakan 5 tabel database yang saling berelasi untuk memastikan integritas data arsitektur E-Library[cite: 23, 80]:
-1. [cite_start]`users` : Menyimpan data kredensial akun admin (email, password, token)[cite: 24, 79, 82].
-2. [cite_start]`komik` : Tabel utama penampung data koleksi komik digital[cite: 80].
-3. [cite_start]`genre` : Tabel master data kategori genre komik (*Berelasi One-to-Many ke tabel komik*)[cite: 80].
-4. [cite_start]`penulis` : Tabel master data penulis/penerbit komik (*Berelasi One-to-Many ke tabel komik*)[cite: 80].
-5. [cite_start]`peminjaman` : Tabel transaksi yang menghubungkan tabel komik dan anggota[cite: 80].
+1. `users` : Menyimpan data kredensial akun admin (email, password, token).
+2. `komik` : Tabel utama penampung data koleksi komik digital.
+3. `genre` : Tabel master data kategori genre komik (*Berelasi One-to-Many ke tabel komik*).
+4. `penulis` : Tabel master data penulis/penerbit komik (*Berelasi One-to-Many ke tabel komik*).
+5. `peminjaman` : Tabel transaksi yang menghubungkan tabel komik dan anggota.
 
 ### 📸 Screenshot Skema Relasi Tabel (phpMyAdmin)
 
