@@ -1,8 +1,8 @@
 # 📚 KomikKu E-Library - Sistem Informasi Rental Komik Digital
 
-[cite_start]Aplikasi **KomikKu E-Library** adalah platform sistem informasi rental komik digital berbasis web yang dibangun untuk memenuhi tugas Ujian Akhir Semester (UAS) mata kuliah **Pemrograman Web 2**[cite: 1]. 
+Aplikasi **KomikKu E-Library** adalah platform sistem informasi rental komik digital berbasis web yang dibangun untuk memenuhi tugas Ujian Akhir Semester (UAS) mata kuliah **Pemrograman Web 2**. 
 
-[cite_start]Proyek ini menerapkan **Decoupled Architecture** (Arsitektur Terpisah) yang memisahkan secara penuh antara Server (Backend API) dan Klien (Frontend Single Page Application)[cite: 4].
+Proyek ini menerapkan **Decoupled Architecture** (Arsitektur Terpisah) yang memisahkan secara penuh antara Server (Backend API) dan Klien (Frontend Single Page Application).
 
 ---
 
@@ -10,7 +10,7 @@
 - **Nama Lengkap:** [LENI]
 - **NIM:** [312410442]
 - **Kelas:** [I241E]
-- [cite_start]**Mata Kuliah:** Pemrograman Web 2 [cite: 1]
+- **Mata Kuliah:** Pemrograman Web 2 
 - **Kampus:** Universitas Pelita Bangsa
 
 ---
